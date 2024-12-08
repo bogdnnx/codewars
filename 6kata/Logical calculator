@@ -1,0 +1,12 @@
+def logical_calc(array, op):
+    current = [array[0]]
+    for i in array[1:]:
+        current.append(i)
+        if op == "AND":
+            val = current[0] & current[1]
+        elif op == "OR":
+            val = current[0] | current[1]
+        else:
+            val = current[0] ^ current[1]
+        current = [val]
+    return current[0]
