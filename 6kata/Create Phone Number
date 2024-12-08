@@ -1,0 +1,5 @@
+def create_phone_number(n):
+    code = ''.join([str(n[i]) for i in range(len(n)) if i<3])
+    next = ''.join([str(n[i]) for i in range(len(n)) if 3<=i<6])
+    next2 = ''.join([str(n[i]) for i in range(len(n)) if i>=6])
+    return f"({code}) {next}-{next2}"
