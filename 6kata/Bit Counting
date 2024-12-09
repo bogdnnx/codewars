@@ -1,0 +1,11 @@
+def count_bits(n):
+    binary = ''
+    while n > 0:
+        binary += str(n % 2)
+        n //= 2
+    return binary.count('1')
+
+
+"""or""
+
+return bin(n).count('1')
