@@ -1,0 +1,15 @@
+def get_count(words=''):
+    if not isinstance(words, str):
+        return {'vowels': 0, 'consonants': 0}
+
+    res = {'vowels': 0, 'consonants': 0}
+    vow = {'a', 'e', 'i', 'o', 'u'}
+
+    for char in words:
+        if char.isalpha():  # Проверяем, является ли символ буквой
+            if char.lower() in vow:
+                res['vowels'] += 1
+            else:
+                res['consonants'] += 1
+
+    return res
