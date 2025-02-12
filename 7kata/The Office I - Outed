@@ -1,0 +1,14 @@
+def outed(meet:dict, boss):
+    cnt = 0
+    for key,value in meet.items():
+        if key != boss:
+            cnt += value
+        if key==boss:
+            if meet[key]<=5:
+                cnt += value*2
+            elif meet[key]>5: #actually i think what 10 is max score what anybody can give you, but it`s incorrect, boss can give you more than 10
+                cnt += value*2
+    res = cnt/len(meet)
+    return "Get Out Now!" if res<=5 else 'Nice Work Champ!'
+            
+    
