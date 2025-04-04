@@ -1,0 +1,6 @@
+def duplicate_count(text):
+    mn = set()
+    for i in text:
+        mn.add(i.lower())
+    res = [None for i in mn if text.lower().count(i)>1]
+    return len(res)
