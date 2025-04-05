@@ -1,0 +1,11 @@
+def rot13(message):
+    normal = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+    rot = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+    composed = dict(zip(normal,rot))
+    res = ''
+    for i in message:
+        if i not in normal:
+            res += i
+        else:
+            res += composed[i]
+    return res
